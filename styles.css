@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+html {
+  font-size: calc(28rem/16);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+
+  background-color: var(--dark-blue);
+}
+
+main {
+  max-width: 12.5rem;
+  min-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+    
+  padding: 1.25rem 0.9rem 0;
+  border-radius: 10px;
+
+  background-color: var(--dark-grayish-blue);
+}
+
+h1 {
+  font-size: 0.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: var(--neon-green);
+}
+
+p {
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.175rem;
+  
+  margin: 1rem 0.25rem;
+
+  color: var(--light-cyan);
+}
+
+.pattern-divider {  
+  height: 0.75rem;
+  width: 100%;
+  background: no-repeat center url("./images/pattern-divider-mobile.svg");
+}
+
+.icon {
+  background-color: var(--neon-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 100%;
+  position: relative;
+  bottom: -1.1rem;  
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  box-shadow: 0 0 1rem var(--neon-green);
+  transform: rotate(45deg);
+}
+
+.attribution { 
+  color: var(--light-cyan);
+  font-size: 0.5rem; 
+  text-align: center; 
+}
+.attribution a { 
+  color: var(--neon-green); 
+}
+
+@media screen and (min-width: 42rem) {
+  main {
+    min-width: 19.5rem;
+    padding: 1.75rem 1.5rem 0;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.35rem;
+  }
+
+  .pattern-divider {
+    background: no-repeat center url("./images/pattern-divider-desktop.svg");
+  }
+}
